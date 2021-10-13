@@ -6,11 +6,13 @@ I'm playing with [TensorFlow](https://www.tensorflow.org/) on the [CIFAR-10](htt
 - TensorFlow 2.4.0+
 
 ## Training
-```
-# Start training with: 
+Start training with: 
+```python
 python main.py
+```
 
-# You can manually resume the training with: 
+You can manually resume the training with: 
+```python
 python main.py --resume
 ```
 
@@ -26,6 +28,8 @@ python main.py --resume
 | [ResNet50](https://arxiv.org/abs/1512.03385)          | 95.41% | 23.6M |
 | [ResNet101](https://arxiv.org/abs/1512.03385)         | 95.44% | 42.6M |
 | [ResNet152](https://arxiv.org/abs/1512.03385)         | 95.29% | 58.3M |
+| [MobileNet](https://arxiv.org/abs/1704.04861)         | 92.34% | 3.2M |
+| [MobileNetV2](https://arxiv.org/abs/1801.04381)       |  |  |
 <!-- | [RegNetX_200MF](https://arxiv.org/abs/2003.13678)     | 94.24%      |
 | [RegNetY_400MF](https://arxiv.org/abs/2003.13678)     | 94.29%      |
 | [MobileNetV2](https://arxiv.org/abs/1801.04381)       | 94.43%      |
