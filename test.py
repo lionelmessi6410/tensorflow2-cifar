@@ -1,4 +1,4 @@
-"""Train CIFAR-10 with TensorFlow2.0."""
+"""Test CIFAR-10 with TensorFlow2.0."""
 import tensorflow as tf
 from tensorflow.keras import layers
 
@@ -165,12 +165,9 @@ def main():
                    'dog', 'frog', 'horse', 'ship', 'truck']
     decay_steps = int(args.epoch*len(train_images)/args.batch_size)
     
-    # Train
-    print('==> Building model...')
-    model = Model(args.model, decay_steps)
-    model.train(train_ds, test_ds, args.epoch)
-    
     # Evaluate
+    print('==> Evaluate...')
+    model = Model(args.model, decay_steps)
     model.predict(test_ds, best=True)
 
 if __name__ == "__main__":

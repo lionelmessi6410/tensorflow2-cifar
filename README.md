@@ -29,6 +29,11 @@ You can manually resume the training with:
 python train.py --model resnet18 --resume
 ```
 
+## Testing 
+```python
+python test.py --model resnet18
+```
+
 ## Accuracy
 | Model             | Acc.   | Param. |
 | ----------------- | ------ | -----: |
