@@ -60,7 +60,7 @@ python test.py --model resnet18
 | SEResNet34        | 95.30% |  21.5M |
 | SEResNet50        | 95.76% |  26.1M |
 | SEResNet101       | 95.40% |  47.3M |
-| SEResNet152       | % |  64.9M |
+| SEResNet152       | 95.29% |  64.9M |
 | SEPreActResNet18  | % |  11.3M |
 | SEPreActResNet34  | % |  21.5M |
 | SEPreActResNet50  | % |  26.1M |

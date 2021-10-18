@@ -33,12 +33,16 @@ class Model():
         elif 'vgg' in model_type:
             self.model = VGG(model_type, num_classes)
         elif 'resnet' in model_type:
-            if 'sepreact' in model_type:
-                self.model = SEPreActResNet(model_type, num_classes)
-            elif 'se' in model_type:
-                self.model = SEResNet(model_type, num_classes)
+            if 'se' in model_type:
+                if 'preact' in model_type:
+                    self.model = SEPreActResNet(model_type, num_classes)
+                else:
+                    self.model = SEResNet(model_type, num_classes)
             else:
-                self.model = ResNet(model_type, num_classes)
+                if 'preact' in model_type:
+                    self.model = PreActResNet(model_type, num_classes)
+                else:
+                    self.model = ResNet(model_type, num_classes)
         elif 'densenet' in model_type:
             self.model = DenseNet(model_type, num_classes)
         elif 'mobilenet' in model_type:
