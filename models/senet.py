@@ -28,7 +28,7 @@ class SELayer(tf.keras.Model):
         # Excitation
         out = x * tf.broadcast_to(out, x.shape)
         return out
-        
+
 class BasicBlock(tf.keras.Model):
     expansion = 1
     
@@ -54,7 +54,7 @@ class BasicBlock(tf.keras.Model):
         out = layers.add([self.shortcut(x), out])
         out = tf.keras.activations.relu(out)
         return out
-    
+
 class BottleNeck(tf.keras.Model):
     expansion = 4
     
@@ -83,7 +83,7 @@ class BottleNeck(tf.keras.Model):
         out = layers.add([self.shortcut(x), out])
         out = tf.keras.activations.relu(out)
         return out
-    
+
 class PreActBlock(tf.keras.Model):
     expansion = 1
     
@@ -108,7 +108,7 @@ class PreActBlock(tf.keras.Model):
         out = self.se(out)
         out = layers.add([shortcut, out])
         return out
-    
+
 class PreActBottleNeck(tf.keras.Model):
     expansion = 4
     
@@ -136,7 +136,7 @@ class PreActBottleNeck(tf.keras.Model):
         out = self.se(out)
         out = layers.add([shortcut, out])
         return out
-    
+
 class BuildSEResNet(tf.keras.Model):
     def __init__(self, block, num_blocks, num_classes, reduction=16):
         super(BuildSEResNet, self).__init__()
@@ -170,7 +170,7 @@ class BuildSEResNet(tf.keras.Model):
             layer += [block(self.in_channels, out_channels, s, reduction)]
             self.in_channels = out_channels * block.expansion
         return tf.keras.Sequential(layer)
-    
+
 def SEResNet(model_type, num_classes):
     if model_type == 'seresnet18':
         return BuildSEResNet(BasicBlock, [2, 2, 2, 2], num_classes)
@@ -184,7 +184,7 @@ def SEResNet(model_type, num_classes):
         return BuildSEResNet(BottleNeck, [3, 8, 36, 3], num_classes)
     else:
         sys.exit(ValueError("{:s} is currently not supported.".format(model_type)))
-    
+
 def SEPreActResNet(model_type, num_classes):
     if model_type == 'sepreactresnet18':
         return BuildSEResNet(PreActBlock, [2, 2, 2, 2], num_classes)
