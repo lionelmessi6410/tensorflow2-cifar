@@ -54,8 +54,8 @@ python test.py --model resnet18
 | PreAct-ResNet18     | 94.08% |  11.2M |
 | PreAct-ResNet34     | 94.76% |  21.3M |
 | PreAct-ResNet50     | 94.81% |  23.6M |
-| PreAct-ResNet101    | 94.90% |  42.6M |
-| PreAct-ResNet152    | 94.28% |  58.3M |
+| PreAct-ResNet101    | 94.95% |  42.6M |
+| PreAct-ResNet152    | 95.07% |  58.3M |
 | SE-ResNet18         | 95.44% |  11.3M |
 | SE-ResNet34         | 95.30% |  21.5M |
 | SE-ResNet50         | 95.76% |  26.1M |
