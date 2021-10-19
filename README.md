@@ -1,5 +1,9 @@
 # Training CIFAR-10 with TensorFlow2(TF2)
-I'm playing with [TensorFlow](https://www.tensorflow.org/) on the [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset.
+[![TensorFlow 2.4](https://img.shields.io/badge/TensorFlow-2.4-FF6F00?logo=tensorflow)](https://github.com/tensorflow/tensorflow/releases/tag/v2.4.0)
+[![Python 3.8](https://img.shields.io/badge/Python-3.8-3776AB)](https://www.python.org/downloads/release/python-380/)
+[![License](https://img.shields.io/github/license/lionelmessi6410/tensorflow2-cifar)](https://github.com/lionelmessi6410/tensorflow2-cifar/blob/main/LICENSE)
+
+TensorFlow2 Classification Model Zoo. I'm playing with [TensorFlow2](https://www.tensorflow.org/) on the [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset.
 
 ## Architectures
 - [LeNet](https://ieeexplore.ieee.org/abstract/document/726791)
