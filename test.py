@@ -132,11 +132,8 @@ class Model():
     
     def predict(self, pred_ds, best):
         if best:
-            best_acc = tf.Variable(0.0)
-            curr_epoch = tf.Variable(0)  # start from epoch 0 or last checkpoint epoch
             ckpt_path = './checkpoints/{:s}/'.format(args.model)
-            ckpt = tf.train.Checkpoint(curr_epoch=curr_epoch, best_acc=best_acc,
-                                       optimizer=self.optimizer, model=self.model)
+            ckpt = tf.train.Checkpoint(model=self.model)
             manager = tf.train.CheckpointManager(ckpt, ckpt_path, max_to_keep=1)
             
             # Load checkpoint
